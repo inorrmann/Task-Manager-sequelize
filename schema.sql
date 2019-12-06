@@ -1,2 +1,3 @@
 DROP DATABASE IF EXISTS todolistDB;
 CREATE DATABASE todolistDB;
+USE todolistDB;
