@@ -1,0 +1,70 @@
+<div class="jumbotron sticky-top text-center">
+    <h1 class="display-3 font-weight-bold">Task Manager</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="incomplete">
+                <h3 class="text-center mb-4">Tasks to Complete </h3>
+                <hr>
+            </div>
+
+            {{#each todosIncomplete}}
+            <div class="row mb-3">
+                <div class="col-9">
+                    <p class="d-inline">{{this.id}} .</p>
+                    <span>&nbsp;</span>
+                    <p class="d-inline" name="task">{{this.task}}</p>
+                </div>
+                <div class="col-3">
+                    <form id="{{this.id}}" class="doneTodo">
+                        <button data-todoid="{{this.id}}" type="submit" class="rounded bg-light"><i
+                                class="far fa-check-circle"></i></i><span>&nbsp;</span> Done!</button>
+                    </form>
+                </div>
+            </div>
+            {{/each}}
+
+        </div>
+
+        <div class="col-6">
+            <div class="complete">
+                <h3 class="text-center mb-4">Completed Tasks</h3>
+                <hr>
+            </div>
+
+            {{#each todosComplete}}
+            <div class="row mb-4">
+                <div class="col-12">
+                    <p class="d-inline">{{id}}</p>
+                    <span>&nbsp;</span>
+                    <p class="d-inline">{{task}}</p>
+                </div>
+            </div>
+            {{/each}}
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <hr>
+        <form id="createTodo">
+            <div class="input-group mx-auto border rounded">
+                <input type="text" class="form-control form-control-lg border-0 rounded-0" name="todo"
+                    placeholder="Enter a task that needs to be completed"></input>
+                <div class="input-group-append">
+                    <button type="submit" id="submit" class="px-4 border-0">Submit</button>
+                </div>
+            </div>
+        </form>
+        <div class="row">
+            <form id="delete" class="mx-auto mt-4">
+                <button type="submit" id="deleteAll" class="px-4 py-2 rounded">Clear all tasks</button>
+            </form>
+        </div>
+    </footer>
+
+</div>
+
+<script type="text/javascript" src="assets/js/script.js"></script>
