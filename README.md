@@ -5,7 +5,6 @@
 [![npm version](https://badge.fury.io/js/mysql2.svg)](https://badge.fury.io/js/mysql2)
 [![npm version](https://badge.fury.io/js/sequelize.svg)](https://badge.fury.io/js/sequelize)
 [![npm version](https://badge.fury.io/js/dotenv.svg)](https://badge.fury.io/js/dotenv)
-
 ![language badge](https://img.shields.io/github/languages/top/inorrmann/Task-manager-sequelize)
 
 
