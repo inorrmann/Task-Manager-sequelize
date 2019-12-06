@@ -8,8 +8,6 @@ var router = require("express").Router();
 router.get("/", function (req, res) {
     // console.log(db.Todos)
     db.Todos.findAll().then(function (data) {
-        console.log(data[0].dataValues)
-        console.log(data.length)
         let todosNotDone = [];
         let todosDone = [];
         for (i = 0; i < data.length; i++) {
@@ -19,8 +17,6 @@ router.get("/", function (req, res) {
             else if (data[i].dataValues.done === true) {
                 todosDone.push(data[i].dataValues);
             }
-            console.log(todosNotDone);
-            console.log(todosDone);
         }
         return res.render("index", { todosIncomplete: todosNotDone, todosComplete: todosDone });
     });
