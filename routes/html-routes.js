@@ -6,21 +6,23 @@ var router = require("express").Router();
 
 
 router.get("/", function (req, res) {
-    console.log(db.Todos)
+    // console.log(db.Todos)
     db.Todos.findAll().then(function (data) {
-        console.log(data)
+        console.log(data[0].dataValues)
+        console.log(data.length)
         let todosNotDone = [];
         let todosDone = [];
         for (i = 0; i < data.length; i++) {
-            if (data[i].done === 0) {
-                todosNotDone.push(data[i]);
+            if (data[i].dataValues.done === false) {
+                todosNotDone.push(data[i].dataValues);
             }
-            else if (data[i].done === 1) {
-                todosDone.push(data[i]);
+            else if (data[i].dataValues.done === true) {
+                todosDone.push(data[i].dataValues);
             }
+            console.log(todosNotDone);
+            console.log(todosDone);
         }
         return res.render("index", { todosIncomplete: todosNotDone, todosComplete: todosDone });
-        // return res.render("index");
     });
 });
 

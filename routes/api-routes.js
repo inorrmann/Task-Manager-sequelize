@@ -6,10 +6,10 @@ var router = require("express").Router();
 router.get("/headers", function (req, res) {
     db.Todos.findAll().then(function  (data) {
         let complete = data.filter((task) => {
-            return task.done === 1
+            return task.done === true
         })
         let incomplete = data.filter((task) => {
-            return task.done === 0
+            return task.done === false
         })
         res.json({ complete, incomplete })
     });
