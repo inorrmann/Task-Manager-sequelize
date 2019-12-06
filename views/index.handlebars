@@ -9,24 +9,6 @@
                 <h3 class="text-center mb-4">Tasks to Complete </h3>
                 <hr>
             </div>
-
-
-let todosNotDone = [];
-        let todosDone = [];
-        for (i = 0; i < data.length; i++) {
-            if (data[i].done === 0) {
-                todosNotDone.push(data[i]);
-            }
-            else if (data[i].done === 1) {
-                todosDone.push(data[i]);
-            }
-        }
-
-
-
-
-
-
             {{#each todosIncomplete}}
             <div class="row mb-3">
                 <div class="col-9">
