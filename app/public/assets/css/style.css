@@ -1,0 +1,61 @@
+.jumbotron {
+    background-color: rgb(118, 124, 125);
+    background-size: 20%;
+    border-radius: 0;
+    color: rgb(190, 199, 202);
+    font-family: 'Montserrat', sans-serif;
+    padding: 3rem 2rem;
+}
+
+body {
+    background-color: rgb(235, 235, 235);
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #5a5757;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 50px;
+    bottom: 0px;
+    background-image: url(../todo.jpg);
+    background-size: cover;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+
+.input-group {
+    width: 75%;
+}
+
+
+.border {
+    border-width: medium !important;
+    border-color: #aab5b9 !important;
+}
+
+::placeholder {
+    color: #757b7c !important;
+    font-size: 18px;
+}
+
+#doneTodo {
+    color: #5a5757;
+}
+
+#submit, #deleteAll {
+    background-color: #757b7c !important;
+    color: white;
+    font-size: 18px;
+}
+
+#submit:hover {
+    background-color: #547454 !important;
+}
+
+#deleteAll:hover {
+    background-color: #c74848 !important;
+}
